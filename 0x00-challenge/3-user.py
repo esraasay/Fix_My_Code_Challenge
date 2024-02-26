@@ -1,4 +1,3 @@
-3-user.py‏
 #!/usr/bin/python3
 """
  User Model
@@ -53,9 +52,9 @@ class User():
         """
         if pwd is None or type(pwd) is not str:
             return False
-        if self.password is None:
+        if self.__password is None:
             return False
-        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.password
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
 
 
 if __name__ == '__main__':
